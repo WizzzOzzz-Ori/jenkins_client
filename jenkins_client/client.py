@@ -108,7 +108,7 @@ class JenkinsClient:
                 logging.info(f"Overall timeout: No status before timeout of {self.overall_max_timeout} secs")
                 sys.exit(1)
 
-            time.sleep(45)
+            time.sleep(15)
 
 
 if __name__ == "__main__":
