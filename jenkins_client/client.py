@@ -39,7 +39,7 @@ class JenkinsClient:
         job_names_list = [item[0] for item in self._jenkins.items()]
         return job_names_list
 
-    def start_job(self, job_name: str, params: dict = None, wait_for_result: bool = True, job_poll_interval: int = 20):
+    def start_job(self, job_name: str, params: dict = None, wait_for_result: bool = True, job_poll_interval = 20):
         """Start a job and poll it until it's over or timed out."""
         if params is not None and type(params) is not dict:
             print(type(params))
