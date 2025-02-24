@@ -100,7 +100,7 @@ class JenkinsClient:
                 sys.exit(1)
             else:
                 logging.info(
-                    f"{time.ctime()} | Job: {build.job.name} | Status: The job is still running. Polling again in {self.job_poll_interval} secs"
+                    f"{time.ctime()} | Job: {build.job.name} | Status: The job is still running. Polling again in {job_poll_interval} secs"
                 )
 
             cur_epoch = int(time.time())
@@ -108,7 +108,7 @@ class JenkinsClient:
                 logging.info(f"Overall timeout: No status before timeout of {self.overall_max_timeout} secs")
                 sys.exit(1)
 
-            time.sleep(15)
+            time.sleep(job_poll_interval)
 
 
 if __name__ == "__main__":
