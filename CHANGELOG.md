@@ -19,6 +19,12 @@
 - fix precommit issues
 - **client.py**: bump timeout to one hour
 
+## v1.3.4 (2025-05-25)
+
+### Fix
+
+- **action.yml**: Add default value for _polling_interval_ so it won't take default value as String
+
 ## v1.3.3 (2023-05-15)
 
 ### Fix
